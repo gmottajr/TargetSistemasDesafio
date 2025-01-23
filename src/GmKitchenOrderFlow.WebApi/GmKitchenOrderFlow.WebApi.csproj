@@ -1,9 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <ItemGroup>
-    <ProjectReference Include="..\gmkitchenorderflow.application\gmkitchenorderflow.application.csproj" />
-    <ProjectReference Include="..\gmkitchenorderflow.ioc\gmkitchenorderflow.ioc.csproj" />
-  </ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -11,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\gmkitchenorderflow.application\gmkitchenorderflow.application.csproj" />
+    <ProjectReference Include="..\gmkitchenorderflow.ioc\gmkitchenorderflow.ioc.csproj" />
+  </ItemGroup>
+
 </Project>
+
