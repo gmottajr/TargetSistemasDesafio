@@ -2,6 +2,7 @@
 using GmKitchenOrderFlow.Domain.Abstractions;
 using Mapster;
 using MapsterMapper;
+using GmKitchenOrderFlow.Application.Models.Abstractions;
 
 namespace GmKitchenOrderFlow.Application;
 

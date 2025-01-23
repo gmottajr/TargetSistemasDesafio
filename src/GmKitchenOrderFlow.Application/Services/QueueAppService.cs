@@ -2,6 +2,7 @@
 using GmKitchenOrderFlow.DAL;
 using GmKitchenOrderFlow.Domain;
 
+
 namespace GmKitchenOrderFlow.Application.Services;
 
 public class QueueAppService : AppServiceBase<QueueDto, Queue, long>, IQueueAppService

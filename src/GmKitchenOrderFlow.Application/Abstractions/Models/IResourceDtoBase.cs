@@ -1,4 +1,4 @@
-﻿namespace GmKitchenOrderFlow.Application;
+﻿namespace GmKitchenOrderFlow.Application.Models.Abstractions;
 
 public interface IResourceDtoBase
 {

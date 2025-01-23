@@ -1,7 +1,7 @@
 ﻿using GmKitchenOrderFlow.Application.Models;
 using GmKitchenOrderFlow.Domain.Abstractions;
 using GmKitchenOrderFlow.DAL.Abstractions;
-
+using GmKitchenOrderFlow.Application.Models.Abstractions;
 
 namespace GmKitchenOrderFlow.Application;
 
