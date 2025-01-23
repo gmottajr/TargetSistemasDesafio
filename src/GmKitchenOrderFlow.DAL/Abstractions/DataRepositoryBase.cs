@@ -1,7 +1,7 @@
 ﻿using GmKitchenOrderFlow.Domain.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
-namespace GmKitchenOrderFlow.DAL;
+namespace GmKitchenOrderFlow.DAL.Abstractions;
 
 /// <summary>
 /// A generic repository for managing data access for entities.
@@ -9,7 +9,7 @@ namespace GmKitchenOrderFlow.DAL;
 /// <typeparam name="TEntity">The type of the entity.</typeparam>
 /// <typeparam name="TKey">The type of the key.</typeparam>
 public class DataRepositoryBase<TEntity, TKey> : IDataRepositoryBase<TEntity, TKey> 
-    where TEntity : EntityBaseRoot
+    where TEntity : EntityBaseRoot<TKey>
 {
     protected readonly DbContext _context;
     protected readonly DbSet<TEntity> _dbSet;

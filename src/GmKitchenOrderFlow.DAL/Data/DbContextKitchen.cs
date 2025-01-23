@@ -173,7 +173,7 @@ public class DbContextKitchen: DbContext
 
     private void UpdateAuditableEntities()
     {
-        var entries = ChangeTracker.Entries<EntityBaseRoot>();
+        var entries = ChangeTracker.Entries<EntityBaseRoot<long>>();
         var now = DateTime.UtcNow;
 
         foreach (var entry in entries)

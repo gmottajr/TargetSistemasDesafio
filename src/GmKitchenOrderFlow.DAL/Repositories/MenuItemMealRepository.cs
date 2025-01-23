@@ -1,4 +1,5 @@
-﻿using GmKitchenOrderFlow.Domain;
+﻿using GmKitchenOrderFlow.DAL.Abstractions;
+using GmKitchenOrderFlow.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace GmKitchenOrderFlow.DAL;

@@ -1,4 +1,4 @@
-﻿namespace GmKitchenOrderFlow.DAL;
+﻿namespace GmKitchenOrderFlow.DAL.Abstractions;
 
     /// <summary>
     /// Generic repository abstraction to manage data access for entities.

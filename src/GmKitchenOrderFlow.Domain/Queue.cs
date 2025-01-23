@@ -2,7 +2,7 @@
 
 namespace GmKitchenOrderFlow.Domain;
 
-public class Queue : EntityBaseRoot
+public class Queue : EntityBaseRoot<long>
 {
     public string Name { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;

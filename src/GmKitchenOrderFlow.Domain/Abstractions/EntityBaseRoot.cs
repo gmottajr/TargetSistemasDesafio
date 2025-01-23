@@ -1,6 +1,7 @@
 ﻿namespace GmKitchenOrderFlow.Domain.Abstractions;
 
-public abstract class EntityBaseRoot : EntityBase
+public abstract class EntityBaseRoot<TKey> : EntityBase
 {
-    public long Id { get; set; }
+    public required TKey Id { get; set; }
 }
+

@@ -2,7 +2,7 @@
 
 namespace GmKitchenOrderFlow.Domain;
 
-public class Order : EntityBaseRoot
+public class Order : EntityBaseRoot<long>
 {
     public string OrderNumber { get; set; } = string.Empty;
     public DateTime? DeletedAt { get; set; }
