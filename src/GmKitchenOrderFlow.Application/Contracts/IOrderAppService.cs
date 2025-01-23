@@ -3,7 +3,7 @@ using GmKitchenOrderFlow.Domain;
 
 namespace GmKitchenOrderFlow.Application;
 
-public interface IOrderAppService : IAppServiceBase<OrderDto, Order, long>
+public interface IOrderAppService : IAppServiceBase<OrderDto, long>
 {
 
 }

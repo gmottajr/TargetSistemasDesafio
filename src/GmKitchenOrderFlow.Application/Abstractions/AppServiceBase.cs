@@ -6,7 +6,7 @@ using GmKitchenOrderFlow.Application.Models.Abstractions;
 
 namespace GmKitchenOrderFlow.Application;
 
-public class AppServiceBase<TDto, TEntity, TKey> : IAppServiceBase<TDto, TEntity, TKey> where TDto : ResourceDtoBaseRoot<TKey> where TEntity : EntityBaseRoot<TKey>
+public class AppServiceBase<TDto, TEntity, TKey> : IAppServiceBase<TDto, TKey> where TDto : ResourceDtoBaseRoot<TKey> where TEntity : EntityBaseRoot<TKey>
 {
     protected readonly IDataRepositoryBase<TEntity, TKey> _repository;
     public AppServiceBase(IDataRepositoryBase<TEntity, TKey> repository)

@@ -5,7 +5,7 @@ using GmKitchenOrderFlow.Application.Models.Abstractions;
 
 namespace GmKitchenOrderFlow.Application;
 
-public interface IAppServiceBase<TDto, TEntity, TKey> where TDto : IResourceDtoBase where TEntity : EntityBaseRoot<TKey>
+public interface IAppServiceBase<TDto, TKey> where TDto : IResourceDtoBase 
 {
     Task<TDto> GetByIdAsync(TKey id);
     Task<IEnumerable<TDto>> GetAllAsync();
