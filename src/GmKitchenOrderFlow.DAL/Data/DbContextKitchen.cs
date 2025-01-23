@@ -1,4 +1,5 @@
 ﻿using GmKitchenOrderFlow.Domain;
+using GmKitchenOrderFlow.Domain.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 namespace GmKitchenOrderFlow.DAL;
@@ -162,5 +163,31 @@ public class DbContextKitchen: DbContext
             .Property(m => m.QueueId)
             .IsRequired(true);
 
+    }
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        UpdateAuditableEntities();
+        return base.SaveChangesAsync(cancellationToken);
+    }
+
+    private void UpdateAuditableEntities()
+    {
+        var entries = ChangeTracker.Entries<EntityBaseRoot>();
+        var now = DateTime.UtcNow;
+
+        foreach (var entry in entries)
+        {
+            switch (entry.State)
+            {
+                case EntityState.Added:
+                    entry.Entity.CreatedAt = now;
+                    entry.Entity.UpdatedAt = now;
+                    break;
+                case EntityState.Modified:
+                    entry.Entity.UpdatedAt = now;
+                    break;
+            }
+        }
     }
 }
