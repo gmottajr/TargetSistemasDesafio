@@ -32,3 +32,4 @@ software-developer-csharp-coding-challenge-new-squads-csharp-.docx
 *.log
 *.tmp
 *.bak
+.fake
