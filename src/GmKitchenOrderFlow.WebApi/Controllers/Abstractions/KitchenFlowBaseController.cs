@@ -4,11 +4,13 @@ using GmKitchenOrderFlow.Application.Models.Abstractions;
 
 namespace GmKitchenOrderFlow.WebApi;
 
-public abstract class BaseControllerKitchenFlow<TDto, TKey> : ControllerBase where TDto : IResourceDtoBase
+[ApiController]
+[Route("api/[controller]")]
+public abstract class KitchenFlowBaseController<TDto, TKey> : ControllerBase where TDto : IResourceDtoBase
 {
     protected readonly IAppServiceBase<TDto, TKey> _applicationService;
 
-    public BaseControllerKitchenFlow(IAppServiceBase<TDto, TKey> applicationService)
+    public KitchenFlowBaseController(IAppServiceBase<TDto, TKey> applicationService)
     {
         _applicationService = applicationService;
     }
